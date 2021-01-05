@@ -1,0 +1,27 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Nama</th>
+      <th scope="col">Tanggal Lahir</th>
+      <th scope="col">Jabatan</th>
+      <th scope="col">NIP</th>
+      <th scope="col">Jenis Kelamin</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employe of employeData; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ employe.name }}</td>
+      <td>{{ employe.tanggalLahir }}</td>
+      <td>{{ employe.jabatan }}</td>
+      <td>{{ employe.nip }}</td>
+      <td>{{ employe.jenisKelamin }}</td>
+      <td>
+        <button class="btn btn-primary">edit</button> &nbsp;
+        <button class="btn btn-danger">delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

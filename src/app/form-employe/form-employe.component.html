@@ -1,0 +1,69 @@
+<section class="container">
+  <div class="card">
+    <section class="text-center pt-3">
+      <h1>Form Employee</h1>
+    </section>
+    <div class="card-body">
+      <form [formGroup]="employeForm" (ngSubmit)="onSubmit()">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Name</span
+          >
+          <input type="text" class="form-control" formControlName="name" />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Tanggal Lahir</span
+          >
+          <input
+            type="date"
+            class="form-control"
+            formControlName="tanggalLahir"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="jabatan">Jabatan :</label>
+
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            formControlName="jabatan"
+          >
+            <option selected disabled value="select">
+              Open this select menu
+            </option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >NIP</span
+          >
+          <input type="text" class="form-control" formControlName="nip" />
+        </div>
+        <div class="mb-3">
+          <label for="jabatan">Jenis Kelamin :</label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            formControlName="jenisKelamin"
+          >
+            <option selected value="laki-laki">Laki-Laki</option>
+            <option value="perempuan">Perempuan</option>
+          </select>
+        </div>
+        <div class="text-center">
+          <button
+            class="btn btn-success"
+            type="submit"
+            [disabled]="employeForm.invalid"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
